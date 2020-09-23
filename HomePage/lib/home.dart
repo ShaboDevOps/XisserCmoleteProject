@@ -4,6 +4,7 @@ import 'package:HomePage/text.dart';
 import 'package:HomePage/imageContant.dart';
 import 'package:HomePage/ButtonClass.dart';
 import 'package:HomePage/BottomNavBarClass.dart';
+import 'package:HomePage/CarouselFile.dart';
 
 class HomePage extends StatelessWidget {
   
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(16, 16, 0, 0),
                 child: TextClass(),
               ),
-              ImageContainerClass("assets/images/girl.jpg"),
+              CarouseClass(),
               SubImageContant(),
               ButtonClass(),
             ],
