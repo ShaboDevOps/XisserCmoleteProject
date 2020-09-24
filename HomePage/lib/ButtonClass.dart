@@ -1,8 +1,10 @@
-
 import 'package:HomePage/mDetails.dart';
 import 'package:flutter/material.dart';
 
 class ButtonClass extends StatelessWidget {
+  String buttonText;
+  int pageNo;
+  ButtonClass(this.buttonText,this.pageNo);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,12 +18,12 @@ class ButtonClass extends StatelessWidget {
       child: RaisedButton(
         color: Colors.deepPurple,
           child: Text(
-            "Request",
+            buttonText,
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.w900, fontSize: 20),
           ),
           onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> MyDetails()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> MyDetails(pageNo)));
           },
           ),
     );

@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
             child: TextClass("Find Your Date"),
           ),
           CarouseClass(),
-          ButtonClass(),
+          ButtonClass("Request",1),
         ],
       ),
     );
