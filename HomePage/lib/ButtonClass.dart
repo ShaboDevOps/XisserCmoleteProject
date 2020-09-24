@@ -1,5 +1,6 @@
+
+import 'package:HomePage/mDetails.dart';
 import 'package:flutter/material.dart';
-import 'CarouselFile.dart';
 
 class ButtonClass extends StatelessWidget {
   @override
@@ -20,7 +21,7 @@ class ButtonClass extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.w900, fontSize: 20),
           ),
           onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> CarouseClass()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> MyDetails()));
           },
           ),
     );

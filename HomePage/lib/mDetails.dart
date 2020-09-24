@@ -1,16 +1,18 @@
+import 'package:HomePage/dateRequest.dart';
+import 'package:HomePage/drawer.dart';
 import 'package:HomePage/home.dart';
 import 'package:HomePage/profile.dart';
-import 'package:HomePage/userDetails.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavBarClass extends StatefulWidget {
+class MyDetails extends StatefulWidget {
   @override
-  _BottomNavBarClassState createState() => _BottomNavBarClassState();
+  _MyDetailsState createState() => _MyDetailsState();
 }
 
-class _BottomNavBarClassState extends State<BottomNavBarClass> {
-  int _currentIndex = 0;
-  final List<Widget> _children = [HomePage(),UserDetail(),Profile()];
+class _MyDetailsState extends State<MyDetails> {
+   int _currentIndex;
+  
+  final List<Widget> _children = [HomePage(), DateRequest(), Profile()];
 
   void onTabTapped(int index) {
     setState(() {
@@ -20,7 +22,14 @@ class _BottomNavBarClassState extends State<BottomNavBarClass> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+        home: Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white12,
+        title: Center(child: Text("Xisser")),
+      ),
+      drawer: Drawer(child: DrawerClass()),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           onTap: onTabTapped,
@@ -39,6 +48,6 @@ class _BottomNavBarClassState extends State<BottomNavBarClass> {
               title: Text("Profile"),
             )
           ]),
-    );
+    ));
   }
 }

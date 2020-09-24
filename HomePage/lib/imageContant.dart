@@ -24,7 +24,10 @@ class ImageContainerClass extends StatelessWidget {
 }
 
 class SubImageContant extends StatelessWidget {
-  SubImageContant();
+ 
+   String myDetails;
+    SubImageContant(this.myDetails);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,7 +37,7 @@ class SubImageContant extends StatelessWidget {
       color: Colors.black38,
       margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
       child: Text(
-        "Babra - 23yrs\nDar Es Salaam",
+        myDetails,
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400,fontSize: 15),
       ),
     );
